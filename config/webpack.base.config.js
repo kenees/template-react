@@ -3,28 +3,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: './src/index.jsx',
   output: {
     publicPath: '/',
     filename: 'assets/js/[name].[contenthash].js',
     path: path.resolve(__dirname, '../dist/')
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json', '.jsx'], // 默认解析扩展文件
+    extensions: ['.js', '.json', '.jsx'], // 默认解析扩展文件
     alias: {
       '@': path.join(__dirname, '../', 'src'),
     },
   },
   module: {
     rules: [
-      {
-        test: /\.(tsx|ts)?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/,
-        options: {
-          transpileOnly: true
-        }
-      },
       {
         test: /\.(jsx|js)?$/,
         exclude: /node_modules/,

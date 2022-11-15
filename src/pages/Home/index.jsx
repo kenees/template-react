@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './index.scss'
 
-function Home(props: any): JSX.Element {
+function Home(props){
     const [count, setCount] = useState(0);
     return (
         <div className={styles.box}>

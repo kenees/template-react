@@ -1,17 +1,7 @@
 import React from "react";
 
-interface Props {
-    children: any
-}
-
-interface State {
-    hasError: boolean,
-    error: any,
-    errorInfo: any
-}
-
-class ErrorBoundary extends React.Component<Props, State> {
-    constructor(props: Props) {
+class ErrorBoundary extends React.Component {
+    constructor(props) {
         super(props);
         this.state = { hasError: false, error: null, errorInfo: null };
     }
@@ -21,7 +11,7 @@ class ErrorBoundary extends React.Component<Props, State> {
         return { hasError: true };
       }
 
-    componentDidCatch(error: any, errorInfo: any) {
+    componentDidCatch(error, errorInfo) {
         // 你同样可以将错误日志上报给服务器
         this.setState({
             error,

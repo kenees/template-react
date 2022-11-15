@@ -1,10 +1,10 @@
 import React, { useReducer } from "react";
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
-import MainContext, { defaultState, reducers  } from '@/store/index.ts';
+import MainContext, { defaultState, reducers  } from '@/store/index';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import Home from "./Home";
 
-function App(): JSX.Element {
+function App() {
   const [store, dispatch] = useReducer(reducers, defaultState);
 
   return (

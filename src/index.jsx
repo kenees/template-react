@@ -7,5 +7,5 @@ import '@/assets/css/global.scss';
 
 
 createRoot(
-    document.getElementById("root") as HTMLElement
+    document.getElementById("root")
 ).render(<App />);

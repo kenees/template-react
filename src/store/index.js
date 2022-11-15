@@ -1,11 +1,11 @@
 import { createContext } from 'react'
 
-const defaultState: any = {
+const defaultState = {
   num: 1,
 };
 
 
-const reducers = (state = defaultState, action: any): any => {
+const reducers = (state = defaultState, action) => {
   switch (action.type) {
     case 'test': {
       return state;

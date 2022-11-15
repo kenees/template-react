@@ -1,16 +1,5 @@
 import React, { Component, SFC } from 'react';
 
-// 定义接口
-export interface IprogressProps {
-  color?: string,
-  background?: string,
-  onOk: () => void,
-} 
-
-export interface IprogressState {
-  name: string,
-}
-
 // 无状态组件
 // const Button: React.SFC = () => {
 //   return (<div>+</div>)
@@ -25,8 +14,8 @@ export interface IprogressState {
 
 
 // 有状态组件
-class Button extends React.Component<IprogressProps, IprogressState>{
-  constructor(props: IprogressProps) {
+class Button extends React.Component{
+  constructor(props) {
     super(props);
     this.state = {
       name: '',
