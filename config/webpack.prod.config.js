@@ -16,14 +16,12 @@ const webpackConfigProd = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: './'
+            }
           },
           {
             loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[local]--[hash:base64:5]',
-              }
-            }
           },
           {
             loader: 'sass-loader'
@@ -44,7 +42,8 @@ const webpackConfigProd = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'assets/css/[name].[hash].css',
+      chunkFilename: 'assets/css/[id].[hash].css',
     }),
     new webpack.DefinePlugin({
       'process.env': {
