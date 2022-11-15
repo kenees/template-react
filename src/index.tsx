@@ -1,6 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import { createRoot } from 'react-dom/client'
+import App from './pages/app';
+// import '@/assets/css/common.scss';
+// import '@/assets/css/index.css';
+// import '@/assets/css/global.scss';
 
-import App from './components/app';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+createRoot(
+    document.getElementById("root") as HTMLElement
+).render(<App />);
