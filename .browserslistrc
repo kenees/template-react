@@ -1,0 +1,9 @@
+[development]
+last 1 chrome version
+last 1 firefox version
+
+[production]
+last 4 version
+
+[ssr]
+node 16

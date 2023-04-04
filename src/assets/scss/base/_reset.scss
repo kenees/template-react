@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: all 100ms ease-out;
+}
+
+html {
+    font-size: $edge_font_size;
+    line-height: $edge_line_height;
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}
